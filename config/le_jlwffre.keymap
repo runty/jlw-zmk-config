@@ -99,9 +99,9 @@
         default_layer {
             bindings = <
 &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y   &kp U  &kp I  &kp O  &kp P
-&kp A    &qt LEFT_ALT S    &qt LEFT_GUI D    &qt LEFT_CONTROL F    &qt LC(LS(LALT)) G &qt RC(RS(RALT)) H          &qt RIGHT_CONTROL J    &qt RIGHT_GUI K    &qt RIGHT_ALT L    &qt RIGHT_SHIFT SINGLE_QUOTE
+&qt LEFT_SHIFT A    &qt LEFT_ALT S    &qt LEFT_GUI D    &qt LEFT_CONTROL F    &qt LC(LS(LALT)) G &qt RC(RS(RALT)) H          &qt RIGHT_CONTROL J    &qt RIGHT_GUI K    &qt RIGHT_ALT L    &qt RIGHT_SHIFT SINGLE_QUOTE
 &qt LEFT_SHIFT Z    &qt RS(RC(RA(RGUI))) X             &kp C             &kp V                 &kp B              &kp N          &kp M        &kp COMMA          &qt RS(RC(RA(RGUI))) DOT            &qt RIGHT_SHIFT SLASH
-                                      &lt 2 TAB             &lt 1 BACKSPACE   &qt RIGHT_SHIFT SPACE    &lt 3 ENTER            >;
+                                      &lt 2 TAB             &lt 1 BACKSPACE  &kp K_MUTE &qt RIGHT_SHIFT SPACE    &lt 3 ENTER            >;
         };
 
         // Numbers and high frequency symbols
@@ -111,7 +111,7 @@
 &none           &none          &none          &none          &none          &kp C_PLAY_PAUSE    &kp C_MUTE     &none            &none        &none
 &none           &none          &none          &none          &none          &kp LEFT            &kp DOWN       &kp UP           &kp RIGHT    &kp SEMICOLON
 &none           &none          &none          &none          &none          &kp HOME            &kp PAGE_UP    &kp PAGE_DOWN    &kp END      &sl 4
-                                         &none          &none          &kp ESCAPE          &kp DEL          
+                                         &kp CAPSLOCK          &none     &kp C_PP     &kp ESCAPE          &kp DEL          
             >;
         };
 
@@ -122,7 +122,7 @@
 &none    &kp F7    &kp F8    &kp F9    &kp F10      &bootloader     &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp BACKSPACE
 &none    &kp F4    &kp F5    &kp F6    &none        &none           &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp COLON
 &none    &kp F1    &kp F2    &kp F3    &none        &kp KP_N0       &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp DOT
-                             &kp CAPSLOCK &kp CAPSLOCK    &kp GLOBE    &kp KP_N0               
+                             &none &none  &kp K_MUTE  &kp GLOBE    &kp KP_N0               
             >;
         };
 
@@ -133,7 +133,7 @@
 &phil    &kp GRAVE     &kp LEFT_BRACE          &kp RIGHT_BRACE          &kp BACKSLASH    &none    &kp AMPS      &kp ASTERISK    &none        &serv
 &kp MINUS    &kp EQUAL    &kp LEFT_BRACKET        &kp RIGHT_BRACKET        &kp PIPE         &none    &kp DOLLAR    &kp PERCENT     &kp CARET    &none
 &kp UNDER        &kp PLUS    &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS    &kp TILDE        &none    &kp EXCL      &kp AT          &kp HASH     &kp LS(LG(LC(NUMBER_4)))
-                             &none          &none                    &none            &none          
+                             &none          &none      &kp K_MUTE              &none            &bootloader          
             >;
         };
 
@@ -144,7 +144,7 @@
 &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4          &none    &none           &none           &none           &bt BT_CLR
 &none           &none          &none          &none          &none          &none    &bt BT_SEL 4    &none           &none           &none
 &none           &none          &none          &none          &none          &none    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &none
-                                      &none          &none          &none    &bt BT_SEL 0          
+                                      &none          &none    &kp K_MUTE      &none    &bt BT_SEL 0          
             >;
         };
 
@@ -155,7 +155,7 @@
 &bootloader    &none    &none    &bt BT_CLR    &bt BT_SEL 0    &bt BT_SEL 3    &none    &unstick    &none    &bootloader
 &none          &none    &none    &none         &bt BT_SEL 1    &bt BT_SEL 4    &none    &none       &none    &none
 &none          &none    &none    &none         &bt BT_SEL 2    &bt BT_SEL 5    &none    &none       &none    &none
-                                 &none         &none           &none           &none
+                                 &none         &none       &kp K_MUTE    &none           &none
             >;
         };
     };
